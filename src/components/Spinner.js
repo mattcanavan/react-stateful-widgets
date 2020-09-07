@@ -43,14 +43,14 @@ export default function Spinner() {
   const [spinnerOn, setSpinnerOn]  = useState(true);
 
   const toggleSpinner = () => {
-  setSpinnerOn(!spinnerOn)
+    setSpinnerOn(!spinnerOn)
   };
 
   return (
     <div className='widget-spinner container'>
       <h2>Spinner</h2>
       {
-        true && <div id='spinner' className='spinner'>--+--</div> /* STEP 2 */
+        {spinnerOn} && <div id='spinner' className='spinner'>--+--</div> /* STEP 2 */
       }
       <button id='toggleSpinner' onClick={toggleSpinner}>
         {spinnerOn === true ? 'Hide' : 'Show'} {/* STEP 3 */}
